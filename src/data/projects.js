@@ -24,11 +24,11 @@ export const projects = [
     categories: ["AI & ML", "Backend"],
     badge: "",
     featured: true,
-    stack: ["FastAPI", "Next.js", "PostgreSQL", "Groq / LLaMA 3.3-70B", "JWT", "SSE"],
+    stack: ["FastAPI", "Next.js", "PostgreSQL", "Groq", "Gemini", "JWT", "SSE"],
     objective:
       "Designed for Pakistani banks, to give customers one conversational interface for questions about accounts, loans, cards, investments and digital banking, instead of searching across separate channels.",
     result:
-      "A multi-agent system in which a triage agent routes each query to one of six specialist agents, with JWT authentication and real-time streamed responses.",
+      "A multi-agent system in which a triage agent routes each query to one of six specialist agents, with JWT authentication, real-time streamed responses and an automatic fallback from Groq to Gemini if the primary model fails.",
     github: "", // PASTE GITHUB LINK HERE
     driveId: "", // PASTE DRIVE VIDEO ID HERE
     cover: PH, // PASTE COVER PIC PATH HERE

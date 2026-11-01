@@ -11,7 +11,13 @@ export const site = {
   email: "areebaakhan.ak@gmail.com",
   linkedin: "https://www.linkedin.com/in/areeba-khan-983893300/",
   github: "https://github.com/AreebaaKhan",
-  resume: "/resume/Areeba_Khan_Resume.pdf",
+    resume: "/resume/Areeba_Khan_Resume.pdf",
+  highlights: [
+    { icon: "trophy", title: "3rd Place", text: "World Space Week Pakistan 2026, SUPARCO", href: "/achievements" },
+    { icon: "trophy", title: "Winner", text: "Sync x Skkillo Backend and AI Engineering Challenge", href: "/achievements" },
+    { icon: "graduation", title: "Section Leader", text: "Stanford Code in Place 2026", href: "/global-classroom" },
+    { icon: "landmark", title: "IT Operations Intern", text: "State Bank of Pakistan", href: "/experience" },
+  ],
   photo: "/images/placeholder.svg",
   nav: [
     { label: "Home", href: "/" },
