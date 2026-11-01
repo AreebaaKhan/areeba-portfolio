@@ -1,0 +1,25 @@
+export const site = {
+  name: "Areeba Khan",
+  shortName: "Areeba",
+  role: "Computer Systems Engineer",
+    tagline: "Computer Systems Engineer building backend and AI systems.",
+  headline: ["Computer Systems Engineer", "Backend", "AI"],
+  year: 2026,
+  intro:
+    "Final-year Computer Systems Engineering student at NED University. I build backend APIs and AI applications, and I teach Python to learners around the world through Stanford's Code in Place.",
+  location: "Karachi, Pakistan",
+  email: "areebaakhan.ak@gmail.com",
+  linkedin: "https://www.linkedin.com/in/areeba-khan-983893300/",
+  github: "https://github.com/AreebaaKhan",
+  resume: "/resume/Areeba_Khan_Resume.pdf",
+  photo: "/images/placeholder.svg",
+  nav: [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Projects", href: "/projects" },
+    { label: "Experience", href: "/experience" },
+    { label: "Global Classroom", href: "/global-classroom" },
+    { label: "Achievements", href: "/achievements" },
+    { label: "Certifications", href: "/certifications" },
+  ],
+};
