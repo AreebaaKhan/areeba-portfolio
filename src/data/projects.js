@@ -29,29 +29,51 @@ export const projects = [
       "Designed for Pakistani banks, to give customers one conversational interface for questions about accounts, loans, cards, investments and digital banking, instead of searching across separate channels.",
     result:
       "A multi-agent system in which a triage agent routes each query to one of six specialist agents, with JWT authentication, real-time streamed responses and an automatic fallback from Groq to Gemini if the primary model fails.",
-    github: "", // PASTE GITHUB LINK HERE
-    driveId: "", // PASTE DRIVE VIDEO ID HERE
-    cover: PH, // PASTE COVER PIC PATH HERE
+    github: "https://github.com/AreebaaKhan/banking-ai-agent.git", // PASTE GITHUB LINK HERE
+    driveId: "1R2qVfSm4rEOQgtYy_Lq6-Ta6vnYC8ppX", // PASTE DRIVE VIDEO ID HERE
+    cover: "/images/projects/ai-banking-advisor/cover.jpg", // PASTE COVER PIC PATH HERE
     preview: "", // PASTE PREVIEW CLIP PATH HERE
-    gallery: [PH, PH, PH], // PASTE PIC PATHS HERE
+    gallery: [
+      "/images/projects/ai-banking-advisor/1.jpg",
+      "/images/projects/ai-banking-advisor/2.jpg",
+      "/images/projects/ai-banking-advisor/3.jpg",
+      "/images/projects/ai-banking-advisor/4.jpg",
+      "/images/projects/ai-banking-advisor/5.jpg",
+      "/images/projects/ai-banking-advisor/6.jpg",
+      "/images/projects/ai-banking-advisor/7.jpg",
+      "/images/projects/ai-banking-advisor/8.jpg",
+      "/images/projects/ai-banking-advisor/9.jpg",
+    ], // PASTE PIC PATHS HERE
   },
   {
     slug: "qabil",
     title: "QABIL",
     subtitle: "AI skill assessment platform",
     categories: ["AI & ML", "Backend"],
-    badge: "GenAI Hackathon by HEC & Pak-Angels",
+    badge: "GenAI Hackathon by HEC x PakAngels",
+    role: "Core Developer",
     featured: true,
     stack: ["Python", "FastAPI", "LangGraph", "Streamlit"],
     objective:
       "Replace self-reported CV claims with a measurable assessment of a candidate's skills, communication and credibility.",
     result:
       "Architected a 7-agent LangGraph system for adaptive skill assessment, AI communication coaching and trust scoring. Built the FastAPI backend with JWT authentication and a Career Passport generator with LLM-powered job matching.",
-    github: "", // PASTE GITHUB LINK HERE
-    driveId: "", // PASTE DRIVE VIDEO ID HERE
-    cover: PH, // PASTE COVER PIC PATH HERE
+    github: "https://github.com/AreebaaKhan/GenAi-Hackathon.git", // PASTE GITHUB LINK HERE
+    driveId: "1yid8XKT6U01H6XFcJqzZLqq_AwNIt_fI", // PASTE DRIVE VIDEO ID HERE
+    cover: "/images/projects/qabil/cover.jpg", // PASTE COVER PIC PATH HERE
     preview: "", // PASTE PREVIEW CLIP PATH HERE
-    gallery: [PH, PH, PH], // PASTE PIC PATHS HERE
+    gallery: [
+      "/images/projects/qabil/1.jpg",
+      "/images/projects/qabil/2.jpg",
+      "/images/projects/qabil/3.jpg",
+      "/images/projects/qabil/4.jpg",
+      "/images/projects/qabil/5.jpg",
+      "/images/projects/qabil/6.jpg",
+      "/images/projects/qabil/7.jpg",
+      "/images/projects/qabil/8.jpg",
+      "/images/projects/qabil/9.jpg",
+      "/images/projects/qabil/10.jpg",
+    ], // PASTE PIC PATHS HERE
   },
   {
     slug: "vulnerability-dashboard",

@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { site } from "@/data/site";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
+import ContactPopover from "./ContactPopover";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -38,12 +39,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={`mailto:${site.email}`}
-            className="hidden rounded-full bg-accent px-4 py-2 text-sm font-medium text-accent-fg transition-opacity hover:opacity-90 lg:inline-flex"
-          >
-            Contact
-          </a>
+          <ContactPopover />
           <ThemeToggle />
           <button
             onClick={() => setOpen(!open)}
@@ -70,12 +66,6 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <a
-            href={`mailto:${site.email}`}
-            className="mt-2 rounded-lg bg-accent px-3 py-2.5 text-center text-sm font-medium text-accent-fg"
-          >
-            Contact
-          </a>
         </nav>
       )}
     </header>

@@ -75,18 +75,7 @@ export const certifications = [
     skills: ["Python", "Object-Oriented Programming (OOP)"],
     link: "", // PASTE CERTIFICATE LINK HERE
   },
-  {
-    group: "professional",
-    title: "Introduction to Data Security",
-    issuer: "DataCamp",
-    date: "Jan 2025",
-    expires: "",
-    badge: "",
-    bullets: [],
-    skills: ["Data Security"],
-    link: "", // PASTE CERTIFICATE LINK HERE
-  },
-
+  
   {
     group: "workshop",
     title: "Generative AI Application Developer",

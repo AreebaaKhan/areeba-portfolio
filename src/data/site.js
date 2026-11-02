@@ -9,6 +9,7 @@ export const site = {
     "Final-year Computer Systems Engineering student at NED University. I build backend APIs and AI applications, and I teach Python to learners around the world through Stanford's Code in Place.",
   location: "Karachi, Pakistan",
   email: "areebaakhan.ak@gmail.com",
+  phone: "+92 312 2114310",
   linkedin: "https://www.linkedin.com/in/areeba-khan-983893300/",
   github: "https://github.com/AreebaaKhan",
     resume: "/resume/Areeba_Khan_Resume.pdf",

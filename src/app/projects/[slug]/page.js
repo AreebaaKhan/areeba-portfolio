@@ -37,7 +37,12 @@ export default async function ProjectPage({ params }) {
       </Link>
 
       <header className="mt-8">
-        {project.badge && <Badge className="mb-4">{project.badge}</Badge>}
+        {(project.badge || project.role) && (
+          <div className="mb-4 flex flex-wrap gap-2">
+            {project.badge && <Badge>{project.badge}</Badge>}
+            {project.role && <Badge>{project.role}</Badge>}
+          </div>
+        )}
         <h1 className="font-display text-3xl font-semibold tracking-tight md:text-5xl">
           {project.title}
         </h1>
@@ -81,15 +86,27 @@ export default async function ProjectPage({ params }) {
       {(hasVideo || hasPics) && (
         <section className="mt-12">
           {hasVideo ? (
-            <div className="grid gap-5 lg:grid-cols-[3fr_2fr]">
-              <DriveVideo id={project.driveId} title={project.title} />
-              {hasPics && (
-                <Gallery
-                  images={project.gallery.slice(0, 3)}
-                  title={project.title}
-                  variant="stack"
-                />
-              )}
+            <div>
+              <div className="grid overflow-hidden rounded-2xl border border-line bg-surface lg:grid-cols-[3fr_2fr]">
+                <DriveVideo id={project.driveId} title={project.title} embedded />
+                {hasPics && (
+                  <div className="border-t border-line lg:border-l lg:border-t-0">
+                    <Gallery
+                      images={project.gallery}
+                      title={project.title}
+                      variant="stack"
+                    />
+                  </div>
+                )}
+              </div>
+              <a
+                href={`https://drive.google.com/file/d/${project.driveId}/view`}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-block text-sm text-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
+              >
+                Watch on Google Drive
+              </a>
             </div>
           ) : (
             <Gallery images={project.gallery} title={project.title} />
