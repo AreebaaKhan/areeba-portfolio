@@ -1,4 +1,9 @@
-export default function DriveVideo({ id, title, embedded = false }) {
+
+export default function DriveVideo({
+  id,
+  title,
+  embedded = false,
+}) {
   const frame = (
     <iframe
       src={`https://drive.google.com/file/d/${id}/preview`}
@@ -10,7 +15,11 @@ export default function DriveVideo({ id, title, embedded = false }) {
   );
 
   if (embedded) {
-    return <div className="aspect-video w-full bg-bg">{frame}</div>;
+    return (
+      <div className="h-full w-full bg-bg">
+        {frame}
+      </div>
+    );
   }
 
   return (
@@ -18,6 +27,7 @@ export default function DriveVideo({ id, title, embedded = false }) {
       <div className="aspect-video overflow-hidden rounded-2xl border border-line bg-surface">
         {frame}
       </div>
+
       <a
         href={`https://drive.google.com/file/d/${id}/view`}
         target="_blank"

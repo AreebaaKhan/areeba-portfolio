@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
@@ -11,24 +12,42 @@ function handleImgError(e) {
   e.currentTarget.src = FALLBACK;
 }
 
-function Tile({ src, alt, onClick, extra, className, flat }) {
+function Tile({
+  src,
+  alt,
+  onClick,
+  extra = 0,
+  className = "",
+  flat = false,
+  contain = false,
+}) {
   return (
     <button
       type="button"
       onClick={onClick}
-      aria-label={extra > 0 ? `View all photos, ${extra} more` : `View ${alt}`}
+      aria-label={
+        extra > 0
+          ? `View all photos, ${extra} more`
+          : `View ${alt}`
+      }
       className={cn(
-        "group relative block overflow-hidden bg-bg transition-colors",
-        flat ? "hover:opacity-90" : "rounded-xl border border-line hover:border-accent",
+        "group relative block min-h-0 min-w-0 overflow-hidden bg-bg transition-colors",
+        flat
+          ? "hover:opacity-90"
+          : "rounded-xl border border-line hover:border-accent",
         className
       )}
     >
       <img
         src={src}
         alt={alt}
-        className="absolute inset-0 h-full w-full object-cover"
+        className={cn(
+          "absolute inset-0 h-full w-full",
+          contain ? "object-contain" : "object-cover"
+        )}
         onError={handleImgError}
       />
+
       {extra > 0 && (
         <span className="absolute inset-0 flex items-center justify-center bg-bg/70 font-display text-2xl font-semibold text-fg">
           +{extra}
@@ -38,7 +57,13 @@ function Tile({ src, alt, onClick, extra, className, flat }) {
   );
 }
 
-function Lightbox({ images, title, index, onClose, onChange }) {
+function Lightbox({
+  images,
+  title,
+  index,
+  onClose,
+  onChange,
+}) {
   const total = images.length;
   const [touchX, setTouchX] = useState(null);
 
@@ -46,6 +71,7 @@ function Lightbox({ images, title, index, onClose, onChange }) {
     () => onChange((index - 1 + total) % total),
     [index, total, onChange]
   );
+
   const next = useCallback(
     () => onChange((index + 1) % total),
     [index, total, onChange]
@@ -57,12 +83,15 @@ function Lightbox({ images, title, index, onClose, onChange }) {
       if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
     }
+
     document.addEventListener("keydown", onKey);
-    const old = document.body.style.overflow;
+
+    const oldOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = old;
+      document.body.style.overflow = oldOverflow;
     };
   }, [onClose, prev, next]);
 
@@ -75,12 +104,18 @@ function Lightbox({ images, title, index, onClose, onChange }) {
       aria-modal="true"
       aria-label={`${title} photos`}
       onClick={onClose}
-      onTouchStart={(e) => setTouchX(e.touches[0].clientX)}
+      onTouchStart={(e) => {
+        setTouchX(e.touches[0].clientX);
+      }}
       onTouchEnd={(e) => {
         if (touchX === null) return;
-        const diff = e.changedTouches[0].clientX - touchX;
+
+        const diff =
+          e.changedTouches[0].clientX - touchX;
+
         if (diff > 50) prev();
         if (diff < -50) next();
+
         setTouchX(null);
       }}
       className="fixed inset-0 z-[100] flex items-center justify-center bg-bg/95 p-4 backdrop-blur-sm"
@@ -114,6 +149,7 @@ function Lightbox({ images, title, index, onClose, onChange }) {
           >
             <ChevronLeft size={20} />
           </button>
+
           <button
             type="button"
             onClick={(e) => {
@@ -139,13 +175,22 @@ function Lightbox({ images, title, index, onClose, onChange }) {
   );
 }
 
-export default function Gallery({ images, title, variant = "grid", limit }) {
+export default function Gallery({
+  images,
+  title,
+  variant = "grid",
+  limit,
+}) {
   const [open, setOpen] = useState(null);
 
-  if (!images || images.length === 0) return null;
+  if (!images || images.length === 0) {
+    return null;
+  }
 
+  const isCover = variant === "cover";
   const isStack = variant === "stack";
-  const max = limit || (isStack ? 4 : 6);
+
+  const max = limit || (isCover ? 1 : isStack ? 4 : 6);
   const shown = images.slice(0, max);
   const extra = images.length - shown.length;
   const count = shown.length;
@@ -156,32 +201,43 @@ export default function Gallery({ images, title, variant = "grid", limit }) {
       src={src}
       alt={`${title} photo ${i + 1}`}
       onClick={() => setOpen(i)}
-      extra={i === count - 1 ? extra : 0}
-      flat={isStack}
+      extra={isCover ? 0 : i === count - 1 ? extra : 0}
+      flat={isCover || isStack}
+      contain={isCover}
       className={cn(
-        isStack ? "aspect-[4/3] lg:aspect-auto" : "aspect-video",
+        isCover || isStack
+          ? "h-full w-full"
+          : "aspect-video",
         isStack && count === 3 && i === 0 && "col-span-2"
       )}
     />
   ));
 
-  const stackCols = count <= 2 ? "grid-cols-1" : "grid-cols-2";
-  const stackRows = count <= 2 ? count : 2;
+  const stackCols = count === 1 ? 1 : 2;
+  const stackRows = count <= 2 ? 1 : 2;
 
   return (
     <>
-      {isStack ? (
+      {isCover ? (
+        <div className="grid h-full w-full grid-cols-1 grid-rows-1">
+          {tiles}
+        </div>
+      ) : isStack ? (
+        // Compact gallery with 1px dividers
         <div
-          style={{ "--rows": stackRows }}
-          className={cn(
-            "grid h-full gap-px bg-line lg:min-h-[14rem] lg:[grid-template-rows:repeat(var(--rows),minmax(0,1fr))]",
-            stackCols
-          )}
+          className="grid h-full w-full gap-px bg-line"
+          style={{
+            gridTemplateColumns: `repeat(${stackCols}, minmax(0, 1fr))`,
+            gridTemplateRows: `repeat(${stackRows}, minmax(0, 1fr))`,
+          }}
         >
           {tiles}
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2">{tiles}</div>
+        // Regular gallery for other usage
+        <div className="grid gap-4 sm:grid-cols-2">
+          {tiles}
+        </div>
       )}
 
       {open !== null && (
