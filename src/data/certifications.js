@@ -17,7 +17,7 @@ export const certifications = [
       "Covers branching, merge conflicts, remote repos, pull requests, GitHub Projects, Actions and security features.",
     ],
     skills: ["Git", "GitHub", "GitHub Actions", "Version Control"],
-    link: "", // PASTE CERTIFICATE LINK HERE
+    link: "https://drive.google.com/file/d/1EpcqRyC-JUxRwOKKpCw1d1fOjyIhg8wU/view", // PASTE CERTIFICATE LINK HERE
   },
   {
     group: "professional",
@@ -31,7 +31,7 @@ export const certifications = [
       "Includes LangChain, OpenAI Agents SDK and Model Context Protocol (MCP).",
     ],
     skills: ["LangChain", "OpenAI Agents SDK", "MCP", "Multi-Agent Systems"],
-    link: "", // PASTE CERTIFICATE LINK HERE
+    link: "https://drive.google.com/file/d/1wbIWRgXP7E8zu21UuCNhr1l7MlIJRdi2/view", // PASTE CERTIFICATE LINK HERE
   },
   {
     group: "professional",
@@ -45,7 +45,7 @@ export const certifications = [
       "Covers IoT architectures, devices, user interfaces and communication protocols.",
     ],
     skills: ["Internet of Things (IoT)"],
-    link: "", // PASTE CERTIFICATE LINK HERE
+    link: "https://drive.google.com/file/d/1sp1G1VEZKC5HQdHqA0MONVgR2Wh_rz7r/view", // PASTE CERTIFICATE LINK HERE
   },
   {
     group: "professional",
@@ -59,7 +59,7 @@ export const certifications = [
       "Covers how AI projects are built and how AI is applied in organisations.",
     ],
     skills: ["Artificial Neural Networks", "Data Science"],
-    link: "", // PASTE CERTIFICATE LINK HERE
+    link: "https://drive.google.com/file/d/1ybONQYInX5X9BydBHuw5szrRTlmf7yOe/view", // PASTE CERTIFICATE LINK HERE
   },
   {
     group: "professional",
@@ -73,7 +73,7 @@ export const certifications = [
       "Core programming tools such as functions and loops.",
     ],
     skills: ["Python", "Object-Oriented Programming (OOP)"],
-    link: "", // PASTE CERTIFICATE LINK HERE
+    link: "https://drive.google.com/file/d/1Sv6UBLUpFscoBUOOZv-hxddlyy9gY1Cu/view", // PASTE CERTIFICATE LINK HERE
   },
   
   {
@@ -88,7 +88,7 @@ export const certifications = [
       "Covers Generative AI concepts, prompt engineering and building AI-powered applications.",
     ],
     skills: ["Generative AI", "Prompt Engineering", "Web Application Development"],
-    link: "", // PASTE CERTIFICATE LINK HERE
+    link: "https://drive.google.com/file/d/1h5nva6m2Ig497PHG-FtC4ifXIBRPt207/view", // PASTE CERTIFICATE LINK HERE
   },
   {
     group: "workshop",
@@ -101,7 +101,7 @@ export const certifications = [
       "Practical Python for business, focused on automation and data handling.",
     ],
     skills: ["Python", "Automation"],
-    link: "", // PASTE CERTIFICATE LINK HERE
+    link: "https://drive.google.com/file/d/1sF6uKaGunQhDVYisF9iNRwXdQLq4OnTK/view", // PASTE CERTIFICATE LINK HERE
   },
   {
     group: "workshop",

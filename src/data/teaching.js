@@ -25,7 +25,8 @@ export const teaching = [
       "Taught weekly 50-minute live sessions covering Karel, console programming, graphics, functions, loops, lists and dictionaries.",
       "Mentored students through debugging and collaborative problem solving.",
     ],
-    certificate: "", // PASTE CERTIFICATE DRIVE LINK HERE
+    certificate: "https://digitalcredential.stanford.edu/check/FE33CDA039D22E2525D4BF8EAFEE5C673896E632E309B3DE8557E98C8D1A8CD9RGcxZHpJb1lSY0d6cUlLUWxLU0tTT2RmYXNNRGR5dE1RdExlbE9heW5qTmF1Y2Jw", // PASTE CERTIFICATE DRIVE LINK HERE
+    badge: "/images/logos/badge.svg",
   },
   {
     role: "Private Tutor",

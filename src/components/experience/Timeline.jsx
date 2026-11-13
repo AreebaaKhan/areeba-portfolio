@@ -57,16 +57,17 @@ export default function Timeline() {
                 ))}
               </ul>
 
-              {item.skills && item.skills.length > 0 && (
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {item.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-line px-3 py-1 text-xs text-muted"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+              {item.certificate && (
+                <div className="mt-5">
+                  <a 
+                    href={item.certificate}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm font-bold text-accent underline-offset-4 hover:underline"
+                  >
+                    View Certificate
+                    <ArrowUpRight size={14} />
+                  </a>
                 </div>
               )}
             </div>

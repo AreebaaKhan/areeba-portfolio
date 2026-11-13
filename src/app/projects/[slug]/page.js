@@ -1,4 +1,4 @@
-
+import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -24,7 +24,15 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function ProjectPage({ params }) {
+export default function ProjectPage({ params }) {
+  return (
+    <Suspense fallback={<div className="min-h-screen" />}>
+      <ProjectContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ProjectContent({ params }) {
   const { slug } = await params;
   const project = getProject(slug);
 

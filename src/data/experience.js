@@ -8,8 +8,9 @@ export const experience = [
     role: "IT Operations Intern",
     org: "State Bank of Pakistan (SBP)",
     location: "Karachi",
-    type: "",
+    type: "On Site",
     dates: "29 June to 7 August 2026",
+    certificate: "https://drive.google.com/file/d/1j6tpHZCAK4gA_4CLHgbNd0z2wGMiQ5oZ/view",
     skills: ["Power BI", "Power Query (M)", "DAX", "Tenable", "FastAPI", "Next.js", "PostgreSQL", "Groq", "Gemini", "JWT", "SSE", "SIEM", "IDS/IPS", "NetBackup"],
     bullets: [
       {
@@ -33,6 +34,7 @@ export const experience = [
     location: "",
     type: "Virtual Experience Program",
     dates: "June 2026 (1 month)",
+    certificate: "https://drive.google.com/file/d/1Xu5W1W8X_QYKG3y6kuCNvX-mfl7ed_Vj/view",
     skills: ["Technology Consulting", "Cloud Computing", "Risk Assessment", "Project Planning", "Requirements Gathering"],
     bullets: [
       {
@@ -46,9 +48,10 @@ export const experience = [
   {
     role: "Backend Developer",
     org: "Certura",
-    location: "",
+    location: "Karachi, Pakistan",
     type: "Virtual Intern",
     dates: "July 2025 (1 month)",
+    certificate: "https://drive.google.com/file/d/1fkS0gdUuikhIJAVkvLjdp_yi9GYa609E/view",
     skills: ["Python", "Flask", "REST APIs", "JWT", "SQLAlchemy", "SQLite", "Postman"],
     bullets: [
       {
@@ -62,9 +65,10 @@ export const experience = [
   {
     role: "Frontend Developer",
     org: "DimensionD Inc.",
-    location: "",
-    type: "",
+    location: "Karachi, Pakistan",
+    type: "Remote",
     dates: "March 2025 to April 2025",
+    certificate: "https://drive.google.com/file/d/1iXb6uCXBbKGVvI1ALy9BU9q-30JLm4Op/view",
     skills: ["React.js", "Tailwind CSS", "Responsive Design"],
     bullets: [
       {

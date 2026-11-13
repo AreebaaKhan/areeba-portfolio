@@ -3,7 +3,7 @@ import PageHeader from "@/components/layout/PageHeader";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import Gallery from "@/components/projects/Gallery";
+import Slideshow from "@/components/achievements/Slideshow";
 import { LinkedinIcon } from "@/components/ui/Icons";
 import { achievements, linkedinPosts } from "@/data/achievements";
 
@@ -66,7 +66,7 @@ export default function AchievementsPage() {
 
               {item.images && item.images.length > 0 && (
                 <div className="mt-6">
-                  <Gallery images={item.images} title={item.title} />
+                  <Slideshow images={item.images} title={item.title} />
                 </div>
               )}
 
@@ -84,7 +84,7 @@ export default function AchievementsPage() {
 
       <section className="mx-auto max-w-4xl px-5 pb-24">
         <h2 className="mb-5 font-display text-xl font-semibold">On LinkedIn</h2>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           {linkedinPosts.map((post, i) => (
             <Reveal key={post.title} delay={i * 0.05}>
               <div className="flex h-full flex-col justify-between gap-5 rounded-2xl border border-line bg-surface p-5">

@@ -44,11 +44,20 @@ export default function GlobalClassroomPage() {
                 ))}
               </ul>
 
-              {item.certificate && (
-                <div className="mt-6">
-                  <Button href={item.certificate} variant="outline">
-                    <Award size={16} /> View Certificate
-                  </Button>
+              {(item.certificate || item.badge) && (
+                <div className="mt-6 flex flex-wrap items-center gap-4">
+                  {item.certificate && (
+                    <Button href={item.certificate} variant="outline">
+                      <Award size={16} /> View Certificate
+                    </Button>
+                  )}
+                  {item.badge && (
+                    <img
+                      src={item.badge}
+                      alt={`${item.role} badge, ${item.program}`}
+                      className="h-24 w-24 shrink-0"
+                    />
+                  )}
                 </div>
               )}
             </div>

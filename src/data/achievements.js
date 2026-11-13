@@ -20,14 +20,23 @@ export const achievements = [
       "Used hybrid monitoring, with a lightweight AI model working alongside independent safety limits on vibration, temperature and pressure data.",
       "In simulation, the system detected all 180 injected faults with zero false safe-mode triggers across 200 simulated normal flights. Hardware validation is the next step.",
     ],
-    images: [PH, PH, PH], // PASTE PRESENTATION PIC PATHS HERE
+    images: [
+      "/images/achievements/suparco/6.jpeg",
+      "/images/achievements/suparco/1.jpeg",
+      "/images/achievements/suparco/2.jpeg",
+      "/images/achievements/suparco/3.jpeg",
+      "/images/achievements/suparco/4.jpeg",
+      "/images/achievements/suparco/5.jpeg",
+      "/images/achievements/suparco/7.jpeg",
+      "/images/achievements/suparco/8.jpeg",
+    ], // PASTE PRESENTATION PIC PATHS HERE
     certificate: "", // PASTE CERTIFICATE DRIVE LINK HERE
   },
   {
     slug: "skkillo",
     label: "Winner",
     title: "Sync x Skkillo Backend and AI Engineering Challenge",
-    event: "",
+    event: "Online Event",
     details:
       "A one-hour backend and AI engineering internship assessment for Sync, a company building AI-powered conversational digital profiles.",
     idea: "",
@@ -35,25 +44,22 @@ export const achievements = [
     bullets: [
       "Built a robust chat completion wrapper with input validation, retries with exponential backoff and clean error handling.",
     ],
-    images: [PH], // PASTE LEADERBOARD PIC PATH HERE
+    images: [
+      "/images/achievements/skkillo/leaderboard.png"
+    ], // PASTE LEADERBOARD PIC PATH HERE
     certificate: "",
   },
 ];
 
 export const linkedinPosts = [
   {
-    title: "State Bank of Pakistan Internship",
+    title: "SUPARCO World Space Week Competition",
     note: "LinkedIn post",
-    url: "", // PASTE LINKEDIN POST LINK HERE
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7514387710636220416/", // PASTE LINKEDIN POST LINK HERE
   },
   {
-    title: "Stanford Code in Place Completion",
+    title: "Sync x Skkillo Challenge",
     note: "LinkedIn post",
-    url: "", // PASTE LINKEDIN POST LINK HERE
-  },
-  {
-    title: "Power BI Vulnerability Dashboard",
-    note: "LinkedIn post",
-    url: "", // PASTE LINKEDIN POST LINK HERE
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7507426975150436353/", // PASTE LINKEDIN POST LINK HERE
   },
 ];
