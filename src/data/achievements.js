@@ -10,7 +10,7 @@ export const achievements = [
     title: "Innovative Ideas Competition on Rocket System Design and Future Challenges",
     event: "World Space Week Pakistan 2026",
     details:
-      "Held at RESOLVE (South), SUPARCO Complex, Karachi. Team Astra Core (with Mashaal Ali), representing NED University.",
+      "Held at RESOLVE (South), SUPARCO Complex, Karachi. Team Astra Core (with one team mate Mashaal Ali), representing NED University.",
     idea: "FPGA-Accelerated Onboard Anomaly Detection for Sounding Rocket Health Monitoring",
     tags: ["FPGA", "Edge AI", "Anomaly Detection"],
     bullets: [
