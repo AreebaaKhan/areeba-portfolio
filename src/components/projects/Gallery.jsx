@@ -67,15 +67,13 @@ export function Lightbox({
   const total = images.length;
   const [touchX, setTouchX] = useState(null);
 
-  const prev = useCallback(
-    () => onChange((index - 1 + total) % total),
-    [index, total, onChange]
-  );
+  const prev = useCallback(() => {
+    if (index > 0) onChange(index - 1);
+  }, [index, onChange]);
 
-  const next = useCallback(
-    () => onChange((index + 1) % total),
-    [index, total, onChange]
-  );
+  const next = useCallback(() => {
+    if (index < total - 1) onChange(index + 1);
+  }, [index, total, onChange]);
 
   useEffect(() => {
     function onKey(e) {
@@ -145,7 +143,8 @@ export function Lightbox({
               prev();
             }}
             aria-label="Previous photo"
-            className={cn(navBtn, "left-3 sm:left-6")}
+            disabled={index === 0}
+            className={cn(navBtn, "left-3 sm:left-6", index === 0 && "invisible")}
           >
             <ChevronLeft size={20} />
           </button>
@@ -157,7 +156,8 @@ export function Lightbox({
               next();
             }}
             aria-label="Next photo"
-            className={cn(navBtn, "right-3 sm:right-6")}
+            disabled={index === total - 1}
+            className={cn(navBtn, "right-3 sm:right-6", index === total - 1 && "invisible")}
           >
             <ChevronRight size={20} />
           </button>

@@ -1,4 +1,5 @@
 import { Award } from "lucide-react";
+import { LinkedinIcon } from "@/components/ui/Icons";
 import PageHeader from "@/components/layout/PageHeader";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
@@ -44,11 +45,16 @@ export default function GlobalClassroomPage() {
                 ))}
               </ul>
 
-              {(item.certificate || item.badge) && (
+              {(item.certificate || item.post || item.badge) && (
                 <div className="mt-6 flex flex-wrap items-center gap-4">
                   {item.certificate && (
                     <Button href={item.certificate} variant="outline">
                       <Award size={16} /> View Certificate
+                    </Button>
+                  )}
+                  {item.post && (
+                    <Button href={item.post} variant="outline">
+                      <LinkedinIcon size={16} /> View LinkedIn Post
                     </Button>
                   )}
                   {item.badge && (

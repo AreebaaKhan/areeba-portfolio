@@ -57,17 +57,30 @@ export default function Timeline() {
                 ))}
               </ul>
 
-              {item.certificate && (
-                <div className="mt-5">
-                  <a 
-                    href={item.certificate}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-bold text-accent underline-offset-4 hover:underline"
-                  >
-                    View Certificate
-                    <ArrowUpRight size={14} />
-                  </a>
+              {(item.certificate || item.post) && (
+                <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
+                  {item.certificate && (
+                    <a
+                      href={item.certificate}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm font-bold text-accent underline-offset-4 hover:underline"
+                    >
+                      View Certificate
+                      <ArrowUpRight size={14} />
+                    </a>
+                  )}
+                  {item.post && (
+                    <a
+                      href={item.post}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm font-bold text-accent underline-offset-4 hover:underline"
+                    >
+                      View LinkedIn Post
+                      <ArrowUpRight size={14} />
+                    </a>
+                  )}
                 </div>
               )}
             </div>

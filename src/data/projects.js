@@ -24,6 +24,34 @@ export const categories = [
 ];
 
 export const projects = [
+
+    {
+    slug: "fpga-sbas-acquisition",
+    title: "AI-Assisted FPGA SBAS Acquisition Engine",
+    subtitle: "Final year project in collaboration with SUPARCO",
+    categories: ["Embedded", "AI & ML"],
+    badge: "In progress",
+    role: "Final Year Project",
+    featured: true,
+    stack: ["FPGA", "Vivado", "MATLAB", "Arty Z7-20"],
+    objective:
+      "Design an FPGA-based acquisition engine for SBAS L1 C/A satellite signals with AI assistance, developed as an industry project in collaboration with SUPARCO.",
+    result:
+      "Work in progress. The PRN generator, carrier NCO, code NCO, multipliers and 1 ms accumulator are built and being verified in Vivado behavioral simulation, with supporting MATLAB simulation. Synthesis, AI integration and board testing on the Arty Z7-20 are the next stages.",
+    github: "",
+    linkedin: "",
+    driveId: "",
+    cover: "/images/projects/fpga-sbas-acquisition/2.png",
+    preview: "",
+    gallery: [
+      "/images/projects/fpga-sbas-acquisition/1.png",
+      "/images/projects/fpga-sbas-acquisition/2.png",
+      "/images/projects/fpga-sbas-acquisition/3.jpeg",
+      "/images/projects/fpga-sbas-acquisition/4.jpeg",
+      "/images/projects/fpga-sbas-acquisition/5.jpeg",
+    ],
+  },
+
   {
     slug: "ai-banking-advisor",
     title: "AI Banking Advisor",
@@ -98,7 +126,7 @@ export const projects = [
     subtitle: "Self-updating Power BI report on Tenable scan data",
     categories: ["Data & Analytics"],
     badge: "",
-    featured: true,
+    featured: false,
     stack: [
       "Power BI",
       "Power Query (M)",
@@ -111,7 +139,7 @@ export const projects = [
       "A Power Query pipeline that standardizes and consolidates the monthly Tenable exports into a single data model. DAX measures track remediation rate, average vulnerability age and CVEs. The report has an Overview page and a Site Deep Dive page with drill-through and dynamic slicers.",
     github:
       "https://github.com/AreebaaKhan/automated-vulnerabilities-assessment-dashboard.git",
-    linkedin: "",
+    linkedin: "https://lnkd.in/p/dseDzKpD",
     driveId: "1ONhkrcJbUBfctqJ2fhbuB3RuE7gPg9h9",
     cover: "/images/projects/vulnerability-dashboard/cover.jpg",
     preview: "",
@@ -142,7 +170,7 @@ export const projects = [
     result:
       "An ATmega328P system that reads a DHT11 sensor with non-blocking polling, shows data on an I2C LCD, triggers a buzzer on threshold breach, adjusts LED brightness with PWM, and logs over USART at 9600 baud. Verified in Proteus 8, then built on a breadboard.",
     github: "",
-    linkedin: "",
+    linkedin: "https://lnkd.in/p/dTsSP_dh",
     driveId: "1822r8qrmLQvPxyDpJE12DvBBIWTTfK04",
     cover: "/images/projects/weather-monitoring/ss1.png",
     preview: "",
@@ -171,7 +199,7 @@ export const projects = [
     result:
       "Trained nine deep learning models (custom CNN, MobileNetV2, ResNet50) on a self-collected dataset of 1,141 images across five classes. ResNet50 reached about 94% test accuracy. The interface supports live webcam capture, file upload, outlier detection and exportable reports.",
     github: "https://github.com/AreebaaKhan/Leaf-Disease-Detection.git",
-    linkedin: "",
+    linkedin: "https://lnkd.in/p/dMqi4vSd",
     driveId: "1GtSVArovGe0PMpKQuAi8DoYju7rNtuMd",
     cover: "/images/projects/plant-disease/i.png",
     preview: "",

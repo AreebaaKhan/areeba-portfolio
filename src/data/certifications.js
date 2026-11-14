@@ -105,6 +105,19 @@ export const certifications = [
   },
   {
     group: "workshop",
+    title: "AI Mastery Bootcamp",
+    issuer: "Hiba Skills Academy",
+    date: "Aug 2025",
+    expires: "",
+    badge: "",
+    bullets: [
+      "Completed a 3-day bootcamp introducing AI.",
+    ],
+    skills: ["Artificial Intelligence"],
+    link: "https://drive.google.com/file/d/1dXVtmFu3ulQF65OxJ1J9vxsoSJTMqOup/view", // PASTE CERTIFICATE LINK HERE
+  },
+  {
+    group: "workshop",
     title: "Build With AI Workshop",
     issuer: "Google Developer Groups",
     date: "Apr 2025",
@@ -114,6 +127,6 @@ export const certifications = [
       "Built a full-stack Resume Match Maker using the Gemini API, a FastAPI backend and a Streamlit frontend, which helps users find skill gaps and tailor resumes to job descriptions.",
     ],
     skills: ["FastAPI", "Gemini API", "Streamlit", "Local LLMs"],
-    link: "", // PASTE CERTIFICATE LINK HERE
+    link: "https://drive.google.com/file/d/1Q0zL9dJyb1LQjrJ492t4TWxh32Le6e3n/view", // PASTE CERTIFICATE LINK HERE
   },
 ];

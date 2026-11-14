@@ -11,6 +11,7 @@ export const experience = [
     type: "On Site",
     dates: "29 June to 7 August 2026",
     certificate: "https://drive.google.com/file/d/1j6tpHZCAK4gA_4CLHgbNd0z2wGMiQ5oZ/view",
+    post: "https://lnkd.in/p/dVdnU_PA",
     skills: ["Power BI", "Power Query (M)", "DAX", "Tenable", "FastAPI", "Next.js", "PostgreSQL", "Groq", "Gemini", "JWT", "SSE", "SIEM", "IDS/IPS", "NetBackup"],
     bullets: [
       {
@@ -52,6 +53,7 @@ export const experience = [
     type: "Virtual Intern",
     dates: "July 2025 (1 month)",
     certificate: "https://drive.google.com/file/d/1fkS0gdUuikhIJAVkvLjdp_yi9GYa609E/view",
+    post: "https://lnkd.in/p/daUSqkbv",
     skills: ["Python", "Flask", "REST APIs", "JWT", "SQLAlchemy", "SQLite", "Postman"],
     bullets: [
       {

@@ -1,11 +1,21 @@
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { site } from "@/data/site";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
+const inter = localFont({
+  src: "../../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2",
+  variable: "--font-inter",
+  weight: "100 900",
+  display: "swap",
+});
+const jakarta = localFont({
+  src: "../../node_modules/@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2",
+  variable: "--font-jakarta",
+  weight: "200 800",
+  display: "swap",
+});
 
 export const metadata = {
   title: { default: `${site.name} | ${site.role}`, template: `%s | ${site.name}` },

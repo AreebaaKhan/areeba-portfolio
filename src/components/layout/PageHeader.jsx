@@ -5,7 +5,7 @@ export default function PageHeader({ eyebrow, title, description }) {
         {title}
       </h1>
       {description && (
-        <p className="mt-4 max-w-2xl leading-relaxed text-muted">{description}</p>
+        <p className="mt-4 leading-relaxed text-muted">{description}</p>
       )}
     </section>
   );

@@ -26,6 +26,7 @@ export const teaching = [
       "Mentored students through debugging and collaborative problem solving.",
     ],
     certificate: "https://digitalcredential.stanford.edu/check/FE33CDA039D22E2525D4BF8EAFEE5C673896E632E309B3DE8557E98C8D1A8CD9RGcxZHpJb1lSY0d6cUlLUWxLU0tTT2RmYXNNRGR5dE1RdExlbE9heW5qTmF1Y2Jw", // PASTE CERTIFICATE DRIVE LINK HERE
+    post: "https://lnkd.in/p/dJkbGYUu",
     badge: "/images/logos/badge.svg",
   },
   {
