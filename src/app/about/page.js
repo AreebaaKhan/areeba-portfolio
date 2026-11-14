@@ -3,7 +3,11 @@ import Reveal from "@/components/ui/Reveal";
 import ProfilePhoto from "@/components/about/ProfilePhoto";
 import { aboutText, education, skillGroups, languages } from "@/data/skills";
 
-export const metadata = { title: "About" };
+export const metadata = {
+  title: "About",
+  description:
+    "Final-year Computer Systems Engineering student at NED University focused on backend development and AI. Education, skills and languages.",
+};
 
 const headingCls =
   "font-display text-3xl font-semibold tracking-tight md:text-5xl";

@@ -3,7 +3,11 @@ import CertCard from "@/components/certifications/CertCard";
 import Reveal from "@/components/ui/Reveal";
 import { certifications } from "@/data/certifications";
 
-export const metadata = { title: "Certifications" };
+export const metadata = {
+  title: "Certifications",
+  description:
+    "Professional certifications, workshops and training in agentic AI, Git and GitHub, Python and IoT.",
+};
 
 function Column({ title, items }) {
   return (

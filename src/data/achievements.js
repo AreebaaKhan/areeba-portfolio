@@ -3,8 +3,6 @@
 // certificate: Drive link. Khali ho to button chhup jata hai.
 // url (LinkedIn): post ki link. Khali ho to button chhup jata hai.
 
-const PH = "/images/placeholder.svg";
-
 export const achievements = [
   {
     slug: "suparco",

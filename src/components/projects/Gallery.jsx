@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -66,6 +66,16 @@ export function Lightbox({
 }) {
   const total = images.length;
   const [touchX, setTouchX] = useState(null);
+  const dialogRef = useRef(null);
+  const closeRef = useRef(null);
+
+  useEffect(() => {
+    const opener = document.activeElement;
+    closeRef.current?.focus();
+    return () => {
+      if (opener && typeof opener.focus === "function") opener.focus();
+    };
+  }, []);
 
   const prev = useCallback(() => {
     if (index > 0) onChange(index - 1);
@@ -80,6 +90,27 @@ export function Lightbox({
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowLeft") prev();
       if (e.key === "ArrowRight") next();
+
+      if (e.key === "Tab" && dialogRef.current) {
+        const items = Array.from(
+          dialogRef.current.querySelectorAll("button:not([disabled])")
+        );
+        if (items.length === 0) return;
+        const first = items[0];
+        const last = items[items.length - 1];
+        const active = document.activeElement;
+
+        if (!dialogRef.current.contains(active)) {
+          e.preventDefault();
+          first.focus();
+        } else if (e.shiftKey && active === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && active === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     }
 
     document.addEventListener("keydown", onKey);
@@ -98,6 +129,7 @@ export function Lightbox({
 
   return (
     <div
+      ref={dialogRef}
       role="dialog"
       aria-modal="true"
       aria-label={`${title} photos`}
@@ -128,6 +160,7 @@ export function Lightbox({
           e.stopPropagation();
           onClose();
         }}
+        ref={closeRef}
         aria-label="Close"
         className="absolute right-5 top-5 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface text-fg transition-colors hover:bg-accent-soft"
       >

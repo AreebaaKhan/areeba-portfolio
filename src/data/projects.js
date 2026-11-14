@@ -12,9 +12,6 @@
 //
 // Jab tak kuch paste nahi karti, site placeholder dikhati hai, error nahi aata.
 
-
-const PH = "/images/placeholder.svg";
-
 export const categories = [
   "All",
   "AI & ML",
@@ -115,7 +112,6 @@ export const projects = [
       "/images/projects/qabil/5.jpg",
       "/images/projects/qabil/6.jpg",
       "/images/projects/qabil/7.jpg",
-      "/images/projects/qabil/8.jpg",
       "/images/projects/qabil/9.jpg",
       "/images/projects/qabil/10.jpg",
     ],
@@ -197,7 +193,7 @@ export const projects = [
     objective:
       "Identify common leaf diseases from photographs and reject inputs that are not leaves.",
     result:
-      "Trained nine deep learning models (custom CNN, MobileNetV2, ResNet50) on a self-collected dataset of 1,141 images across five classes. ResNet50 reached about 94% test accuracy. The interface supports live webcam capture, file upload, outlier detection and exportable reports.",
+      "Trained nine deep learning models (custom CNN, MobileNetV2, ResNet50) on a self-collected dataset of 1,141 images across five classes, four leaf conditions plus a non-leaf class. The best model, MobileNetV2 with a 256-unit head, reached about 90% test accuracy. The interface supports live webcam capture, file upload, outlier detection and exportable reports.",
     github: "https://github.com/AreebaaKhan/Leaf-Disease-Detection.git",
     linkedin: "https://lnkd.in/p/dMqi4vSd",
     driveId: "1GtSVArovGe0PMpKQuAi8DoYju7rNtuMd",

@@ -1,7 +1,11 @@
 import PageHeader from "@/components/layout/PageHeader";
 import ProjectFilter from "@/components/projects/ProjectFilter";
 
-export const metadata = { title: "Projects" };
+export const metadata = {
+  title: "Projects",
+  description:
+    "Backend, AI and data projects by Areeba Khan, each with a walkthrough video, screenshots and source code.",
+};
 
 export default function ProjectsPage() {
   return (

@@ -7,7 +7,11 @@ import Slideshow from "@/components/achievements/Slideshow";
 import { LinkedinIcon } from "@/components/ui/Icons";
 import { achievements, linkedinPosts } from "@/data/achievements";
 
-export const metadata = { title: "Achievements" };
+export const metadata = {
+  title: "Achievements",
+  description:
+    "3rd place at World Space Week Pakistan 2026 and winner of the Sync x Skkillo Backend and AI Engineering Challenge.",
+};
 
 export default function AchievementsPage() {
   return (

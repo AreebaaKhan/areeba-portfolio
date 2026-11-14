@@ -13,7 +13,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/areeba-khan-983893300/",
   github: "https://github.com/AreebaaKhan",
   resume: "/resume/Areeba_Khan_Resume.pdf",
-  resumeView: "",
+  resumeView: "https://drive.google.com/file/d/18TnXVjuewf6ruE9mf_m_iIdbm1-cpLbm/view",
   highlights: [
     { icon: "trophy", title: "3rd Place", text: "World Space Week Pakistan 2026, SUPARCO", href: "/achievements" },
     { icon: "trophy", title: "Winner", text: "Sync x Skkillo Backend and AI Engineering Challenge", href: "/achievements" },

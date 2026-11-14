@@ -1,7 +1,11 @@
 import PageHeader from "@/components/layout/PageHeader";
 import Timeline from "@/components/experience/Timeline";
 
-export const metadata = { title: "Experience" };
+export const metadata = {
+  title: "Experience",
+  description:
+    "IT Operations internship at State Bank of Pakistan, a frontend role at DimensionD, and virtual programs with Deloitte Australia and Certura.",
+};
 
 export default function ExperiencePage() {
   return (

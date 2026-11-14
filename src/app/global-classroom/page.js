@@ -6,7 +6,11 @@ import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import { teaching } from "@/data/teaching";
 
-export const metadata = { title: "Global Classroom" };
+export const metadata = {
+  title: "Global Classroom",
+  description:
+    "Volunteer teaching and mentoring with Stanford Code in Place, and private tutoring in mathematics, physics and computer science.",
+};
 
 export default function GlobalClassroomPage() {
   return (
