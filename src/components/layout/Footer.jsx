@@ -13,7 +13,7 @@ export default function Footer() {
           {site.year} {site.name}. Karachi, Pakistan.
         </p>
         <div className="flex items-center gap-2">
-          <a href={`mailto:${site.email}`} aria-label="Email" className={linkCls}>
+          <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${site.email}`} target="_blank" rel="noreferrer" aria-label="Email" className={linkCls}>
             <Mail size={16} />
           </a>
           <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className={linkCls}>

@@ -18,8 +18,22 @@ const jakarta = localFont({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://areeba-khan.vercel.app"),
   title: { default: `${site.name} | ${site.role}`, template: `%s | ${site.name}` },
   description: site.tagline,
+  openGraph: {
+    title: `${site.name} | ${site.role}`,
+    description: site.tagline,
+    url: "/",
+    siteName: `${site.name} Portfolio`,
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: `${site.name} | ${site.role}`,
+    description: site.tagline,
+  },
 };
 
 const themeScript = `(function(){try{var t=localStorage.getItem("theme");document.documentElement.setAttribute("data-theme",t==="light"?"light":"dark");}catch(e){document.documentElement.setAttribute("data-theme","dark");}})();`;
@@ -28,6 +42,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       data-theme="dark"
       suppressHydrationWarning
       className={`${inter.variable} ${jakarta.variable}`}

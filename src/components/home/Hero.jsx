@@ -122,7 +122,7 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex items-center gap-2">
-            <a href={`mailto:${site.email}`} aria-label="Email" className={iconLink}>
+            <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${site.email}`} target="_blank" rel="noreferrer" aria-label="Email" className={iconLink}>
               <Mail size={17} />
             </a>
             <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className={iconLink}>
